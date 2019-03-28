@@ -1,0 +1,13 @@
+platform :ios, '10.0'
+use_frameworks!
+
+target 'GVKit_Example' do
+  pod 'GVKit/Complete', :path => '../'
+  
+  target 'GVKit_Tests' do
+    inherit! :search_paths
+
+    pod 'Quick', '~> 1.3'
+    pod 'Nimble', '~> 7.3'
+  end
+end

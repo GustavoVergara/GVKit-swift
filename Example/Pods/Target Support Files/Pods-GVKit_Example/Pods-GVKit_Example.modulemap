@@ -1,0 +1,6 @@
+framework module Pods_GVKit_Example {
+  umbrella header "Pods-GVKit_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
