@@ -5,6 +5,8 @@
 
 import Foundation
 import Alamofire
+
+#if canImport(RxSwift)
 import RxSwift
 
 extension PrimitiveSequenceType where TraitType == SingleTrait, ElementType: DataResponseType {
@@ -21,3 +23,4 @@ extension PrimitiveSequenceType where TraitType == SingleTrait, ElementType: Dat
     }
     
 }
+#endif
