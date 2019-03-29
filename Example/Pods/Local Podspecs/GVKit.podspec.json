@@ -1,9 +1,9 @@
 {
   "name": "GVKit",
   "version": "5.0.0",
-  "summary": "A short description of GVKit.",
+  "summary": "A small toolbox of extensions and other useful stuff for swift that I use in my projects.",
   "description": "A group of useful code to be reused, always trying to feel just like part of the framework it requires.\nIt will feel like it was always there.",
-  "homepage": "https://github.com/GustavoVergara/GVKit",
+  "homepage": "https://github.com/GustavoVergara/GVKit-swift",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,20 +12,14 @@
     "GustavoVergara": "gustavovgarcia.sl@gmail.com"
   },
   "source": {
-    "git": "https://github.com/GustavoVergara/GVKit.git",
+    "git": "git@github.com:GustavoVergara/GVKit-swift.git",
     "tag": "5.0.0",
     "submodules": true
   },
   "default_subspecs": "NoDependencies",
-  "swift_version": "5",
+  "swift_version": "5.0",
   "platforms": {
     "ios": "10.0"
-  },
-  "resource_bundles": {
-    "GVKit": [
-      "GVKit/Assets/**/*",
-      "GVKit/Classes/**/*.xib"
-    ]
   },
   "subspecs": [
     {

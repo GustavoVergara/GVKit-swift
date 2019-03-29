@@ -22,17 +22,17 @@ Pod::Spec.new do |spec|
   It will feel like it was always there.
                        DESC
 
-  spec.homepage         = 'https://github.com/GustavoVergara/GVKit'
+  spec.homepage         = 'https://github.com/GustavoVergara/GVKit-swift'
   spec.license          = { :type => 'MIT', :file => 'LICENSE' }
   spec.author           = { 'GustavoVergara' => 'gustavovgarcia.sl@gmail.com' }
   spec.source           = {
-      :git => 'https://github.com/GustavoVergara/GVKit.git',
+      :git => 'https://github.com/GustavoVergara/GVKit-swift.git',# 'git@github.com:GustavoVergara/GVKit-swift.git',
       :tag => spec.version.to_s,
       :submodules => true
   }
   spec.default_subspec = 'NoDependencies'
 
-  spec.swift_version = '5'
+  spec.swift_version = '5.0'
   spec.ios.deployment_target = '10.0'
 
 
