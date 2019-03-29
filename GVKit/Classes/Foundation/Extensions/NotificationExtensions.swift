@@ -19,11 +19,23 @@ extension Notification.Name: ExpressibleByStringLiteral {
 public extension NotificationCenter {
     
     func addObserver(forName name: Notification.Name?,
-                            object: Any? = nil,
-                            queue: OperationQueue? = nil,
-                            using block: @escaping (Notification) -> Void
+                     object: Any?,
+                     using block: @escaping (Notification) -> Void
     ) -> NSObjectProtocol {
-        return self.addObserver(forName: name, object: object, queue: queue, using: block)
+        return self.addObserver(forName: name, object: object, queue: nil, using: block)
+    }
+    
+    func addObserver(forName name: Notification.Name?,
+                     queue: OperationQueue? = nil,
+                     using block: @escaping (Notification) -> Void
+    ) -> NSObjectProtocol {
+        return self.addObserver(forName: name, object: nil, queue: queue, using: block)
+    }
+    
+    func addObserver(forName name: Notification.Name?,
+                     using block: @escaping (Notification) -> Void
+    ) -> NSObjectProtocol {
+        return self.addObserver(forName: name, object: nil, queue: nil, using: block)
     }
     
 }
