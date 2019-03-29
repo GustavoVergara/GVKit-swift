@@ -38,9 +38,9 @@ Pod::Spec.new do |spec|
 
   # spec.source_files = 'GVKit/Classes/Extensions/Foundation/**/*.{swift,h,m}'
   
-  spec.resource_bundles = {
-    'GVKit' => ['GVKit/Assets/**/*', 'GVKit/Classes/**/*.xib']
-  }
+  # spec.resource_bundles = {
+  #   'GVKit' => ['GVKit/Assets/**/*', 'GVKit/Classes/**/*.xib']
+  # }
 
   # spec.public_header_files = 'Pod/Classes/**/*.h'
   # spec.frameworks = 'UIKit', 'MapKit'
