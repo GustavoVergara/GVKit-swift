@@ -24,14 +24,10 @@ public extension Collection {
     
 }
 
-public extension Collection where Index == Int {
+public extension Collection {
     
     func indices(where predicate: (Element) throws -> Bool) rethrows -> [Index] {
-        var returnValue = [Index]()
-        for (index, element) in self.enumerated() where try predicate(element) {
-            returnValue.append(index)
-        }
-        return returnValue
+        return try self.indices.filter({ try predicate(self[$0]) })
     }
     
 }
@@ -42,6 +38,10 @@ extension Collection where Element: Equatable {
         guard let elementIndex = self.firstIndex(of: firstElement), elementIndex < self.endIndex else { return nil }
         
         return self.index(after: elementIndex)
+    }
+    
+    func ends<C: Collection>(with collection: C) -> Bool where C.Element == Element {
+        return self.suffix(collection.count).starts(with: collection)
     }
     
 }
@@ -73,6 +73,22 @@ public extension Set {
     func difference(from other: Set<Element>) -> Differences<Element> {
         return Differences<Element>(between: self, and: other)
     }
+}
+
+public extension Sequence {
+    
+    func first(_ n: Int) -> [Element] {
+        var count = 0
+        return self.filter({ _ -> Bool in
+            count += 1
+            return count <= n
+        })
+    }
+    
+    func last(_ n: Int) -> [Element] {
+        return self.reversed().first(n).reversed()
+    }
+    
 }
 
 // MARK: - Operators

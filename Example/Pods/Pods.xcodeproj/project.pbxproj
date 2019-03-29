@@ -323,6 +323,7 @@
 		99714C27A62547046D16080ABA9ABFC1 /* Completable+AndThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7DDD372EDE6973F457291EB3EE3DD4 /* Completable+AndThen.swift */; };
 		9979808F1F130ABE2BF036C1BDEB3FBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A26FAC3673B1DA48BF31BE5E4325B9 /* Foundation.framework */; };
 		99D5BF9314BF5D9B17A33C24A057D8F9 /* Bag+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A41692C6E813005CA054DE9059D48 /* Bag+Rx.swift */; };
+		9B0A17FB224ECB1400D458E9 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0A17FA224ECB1400D458E9 /* IntExtensions.swift */; };
 		9BB4D8C1780070D4AB71A5BDF60A4AB2 /* RxCollectionViewDataSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94802CFD6A69A0EE3A754370C1F7CEC4 /* RxCollectionViewDataSourceType.swift */; };
 		9C25BC723ED8C3D2AD876B9CAC53B173 /* Nimble.h in Headers */ = {isa = PBXBuildFile; fileRef = 10DDF0FF1259F5F465A730AC6259292D /* Nimble.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C37C7CB53B78412EBBAFB8CBA7FBCB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A26FAC3673B1DA48BF31BE5E4325B9 /* Foundation.framework */; };
@@ -1035,6 +1036,7 @@
 		9A509B6AF83BA5CC694DBE0777086B7F /* RxWebViewDelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxWebViewDelegateProxy.swift; path = RxCocoa/iOS/Proxies/RxWebViewDelegateProxy.swift; sourceTree = "<group>"; };
 		9A7EB13B997A0252AAC8B1CC6E4B884C /* Observable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Observable.swift; path = RxSwift/Observable.swift; sourceTree = "<group>"; };
 		9A94FF285BDF239FE7A657D04F234DED /* Maybe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Maybe.swift; path = RxSwift/Traits/Maybe.swift; sourceTree = "<group>"; };
+		9B0A17FA224ECB1400D458E9 /* IntExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
 		9B15CDB4B3051E8337B0BD72C90B6BE3 /* PriorityQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PriorityQueue.swift; path = Platform/DataStructures/PriorityQueue.swift; sourceTree = "<group>"; };
 		9B2A97161461095494410D3BEAC77D17 /* CombineLatest+Collection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CombineLatest+Collection.swift"; path = "RxSwift/Observables/CombineLatest+Collection.swift"; sourceTree = "<group>"; };
 		9B73D584AA67544933F5BBE5439B061F /* DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DSL.swift; path = Sources/Nimble/DSL.swift; sourceTree = "<group>"; };
@@ -2327,6 +2329,7 @@
 				E2302C1B74399E661E6A7DB0E63CBA3B /* StringExtension.swift */,
 				E2B6705277552C5C41F95625FB200B39 /* URLExtension.swift */,
 				A59E4BFAB76B3FA1583356B309ECA5A1 /* UtilsWrapper */,
+				9B0A17FA224ECB1400D458E9 /* IntExtensions.swift */,
 			);
 			name = Extensions;
 			path = GVKit/Classes/Core/Extensions;
@@ -2883,6 +2886,7 @@
 				786918FEAE2A59C826D998B3F696C973 /* RoundedButton.swift in Sources */,
 				9CCC58B9F72695B77A7E41E5A1514C24 /* Rx+LoadingOverlayView.swift in Sources */,
 				EAFD834CABDEF53D7FFDCBF4A0CCEB1E /* Rx+RPCircularProgress.swift in Sources */,
+				9B0A17FB224ECB1400D458E9 /* IntExtensions.swift in Sources */,
 				796E0CA22466BA5C6051B1B3071C7D60 /* Rx+SocketIO.swift in Sources */,
 				DB364DAD6F4416B7BBA4DCAEE9B9C909 /* Rx+Timer.swift in Sources */,
 				5FF2ED82BF00EFA6B6B684E8FD079120 /* Rx+UIBarButtonItem.swift in Sources */,
