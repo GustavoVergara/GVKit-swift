@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
   spec.name             = 'GVKit'
   spec.version          = '5.0.0'
-  spec.summary          = 'A short description of GVKit.'
+  spec.summary          = 'A small toolbox of extensions and other useful stuff for swift that I use in my projects.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -41,10 +41,6 @@ Pod::Spec.new do |spec|
   # spec.resource_bundles = {
   #   'GVKit' => ['GVKit/Assets/**/*', 'GVKit/Classes/**/*.xib']
   # }
-
-  # spec.public_header_files = 'Pod/Classes/**/*.h'
-  # spec.frameworks = 'UIKit', 'MapKit'
-  # spec.dependency 'AFNetworking', '~> 2.3'
   
   spec.subspec 'Complete' do |subspec|
       subspec.dependency 'GVKit/NoDependencies'
