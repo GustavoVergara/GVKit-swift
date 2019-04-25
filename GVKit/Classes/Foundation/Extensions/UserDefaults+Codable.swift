@@ -9,19 +9,13 @@ import Foundation
 
 public extension UserDefaults {
     
-    func decodable<D: Decodable>(_ decodable: D.Type, forKey key: String, using decoder: JSONDecoder = JSONDecoder()) -> D? {
+    func decodable<D: Decodable>(_ decodable: D.Type, forKey key: String, using decoder: JSONDecoder = JSONDecoder()) throws -> D? {
         guard let rawData = self.data(forKey: key) else { return nil }
-        
-        return try? decoder.decode(decodable, from: rawData)
+        return try decoder.decode(decodable, from: rawData)
     }
     
-    func set<E: Encodable>(encodable value: E?, forKey key: String, using encoder: JSONEncoder = JSONEncoder()) {
-        guard let value = value else {
-            self.setValue(nil, forKey: key)
-            return
-        }
-        
-        self.setValue(try? encoder.encode(value), forKey: key)
+    func setEncodable<E: Encodable>(_ value: E?, forKey key: String, using encoder: JSONEncoder = JSONEncoder()) throws {
+        self.setValue(try value.map(encoder.encode), forKey: key)
     }
     
 }
