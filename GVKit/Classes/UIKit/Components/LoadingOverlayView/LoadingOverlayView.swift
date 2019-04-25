@@ -63,10 +63,6 @@ public extension Utils where Base: UIView {
         guard self.hasLoadingOverlay == false else { return }
         let loadingView = LoadingOverlayView()
         self.base.addSubview(loadingView)
-        
-//        loadingView.snp.makeConstraints { make in
-//            make.edges.equalToSuperview()
-//        }
     }
     
     func removeLoadingOverlay() {

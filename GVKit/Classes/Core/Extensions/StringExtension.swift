@@ -3,9 +3,6 @@
 //  GVKit
 //
 
-import Foundation
-import UIKit
-
 public extension String {
     
     var isValidCPF: Bool {

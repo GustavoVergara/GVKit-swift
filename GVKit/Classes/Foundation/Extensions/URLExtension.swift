@@ -3,7 +3,7 @@
 //  GVKit
 //
 
-//Code from https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/Extensions/Foundation/URLExtensions.swift
+// Code from https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/Extensions/Foundation/URLExtensions.swift
 import Foundation
 import CoreLocation
 

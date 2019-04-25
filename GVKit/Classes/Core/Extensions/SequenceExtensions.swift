@@ -3,8 +3,6 @@
 //  GVKit
 //
 
-import Foundation
-
 public extension Collection {
     
     func last(where predicate: (Element) throws -> Bool) rethrows -> Element? {

@@ -3,8 +3,6 @@
 //  GVKit
 //
 
-import Foundation
-
 public extension Optional {
     
     func unwraped() throws -> Wrapped {

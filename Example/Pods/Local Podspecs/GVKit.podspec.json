@@ -12,7 +12,7 @@
     "GustavoVergara": "gustavovgarcia.sl@gmail.com"
   },
   "source": {
-    "git": "git@github.com:GustavoVergara/GVKit-swift.git",
+    "git": "https://github.com/GustavoVergara/GVKit-swift.git",
     "tag": "5.0.0",
     "submodules": true
   },

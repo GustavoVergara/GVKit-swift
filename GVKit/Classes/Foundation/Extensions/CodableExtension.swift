@@ -75,3 +75,19 @@ public extension JSONDecoder.DateDecodingStrategy {
     }
     
 }
+
+public extension JSONEncoder.DateEncodingStrategy {
+    
+    @available(iOS 10.0, *)
+    static func iso8601(formatOptions: ISO8601DateFormatter.Options) -> JSONEncoder.DateEncodingStrategy {
+        return .custom({ (date, encoder) in
+            var singleValueContainer = encoder.singleValueContainer()
+            
+            let isoFormatter = ISO8601DateFormatter()
+            isoFormatter.formatOptions = formatOptions
+            
+            try singleValueContainer.encode(isoFormatter.string(from: date))
+        })
+    }
+    
+}
