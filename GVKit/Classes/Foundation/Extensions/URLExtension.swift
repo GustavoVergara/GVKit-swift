@@ -9,6 +9,19 @@ import CoreLocation
 
 public extension URL {
     
+    var queryParameters: [String: String]? {
+        guard let components = URLComponents(url: self, resolvingAgainstBaseURL: true), let queryItems = components.queryItems else {
+            return nil
+        }
+        
+        var parameters = [String: String]()
+        for item in queryItems {
+            parameters[item.name] = item.value
+        }
+        
+        return parameters.isEmpty == false ? parameters : nil
+    }
+    
     /// SwifterSwift: URL with appending query parameters.
     ///
     ///        let url = URL(string: "https://google.com")!
@@ -36,19 +49,6 @@ public extension URL {
     mutating func appendQueryParameters(_ parameters: [String: String]) {
         self = appendingQueryParameters(parameters)
     }
-    
-    var queryParameters: [String: String]? {
-        guard let components = URLComponents(url: self, resolvingAgainstBaseURL: true), let queryItems = components.queryItems else {
-            return nil
-        }
-        
-        var parameters = [String: String]()
-        for item in queryItems {
-            parameters[item.name] = item.value
-        }
-        
-        return parameters.isEmpty == false ? parameters : nil
-    }
 
 }
 
@@ -56,12 +56,12 @@ public extension URL {
     
     static var applicationSettings: URL { return URL(string: UIApplication.openSettingsURLString)! }
     
-    static func googleMaps(navigateTo coordinate: CLLocationCoordinate2D) -> URL {
-        return .googleMaps(startAddress: "Current+Location", endAddress: "\(coordinate.latitude),\(coordinate.longitude)")
-    }
-    
     static func googleMaps(startAddress: String, endAddress: String) -> URL {
         return URL(string: "comgooglemaps://?saddr=\(startAddress),&daddr=\(endAddress)")!
+    }
+    
+    static func googleMaps(navigateTo coordinate: CLLocationCoordinate2D) -> URL {
+        return .googleMaps(startAddress: "Current+Location", endAddress: "\(coordinate.latitude),\(coordinate.longitude)")
     }
     
     static func waze(navigateTo coordinate: CLLocationCoordinate2D) -> URL {
